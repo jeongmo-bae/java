@@ -1,7 +1,14 @@
 package net.wikidocs.jump2java.dtypes;
 
-public class SampleNumericData {
+public class NumericTypes {
     public static void main(String[] args) {
+        // int count = 876482738492384;   // java: integer number too large
+        long countOfStar = 8764827384923849L;
+        System.out.println(countOfStar);
+        float pi = 3.14F;
+        double morePi = 3.14159265358979323846;
+        System.out.println(pi);
+        System.out.println(morePi);
         int num1 = 10;
         int num2 = 5;
         System.out.printf("+ res : %d%n",num1+num2);
