@@ -23,7 +23,18 @@ public class StringBufferTypes {
         toUpperCase와 같은 메서드를 보면 문자열이 변경되는 것처럼 생각할 수도 있지만 해당 메서드를 수행할 때
         또 다른 String 객체를 생성하여 리턴할 뿐이다. 반면에 StringBuffer 자료형은 값을 변경할 수 있으므로 생성된 값을 언제든지 수정할 수 있다.
         StringBuffer - mutable
-        Strung - immutable
+        String - immutable (insert 메서드가 없지)
+
+        StringBuffer는 스레드 안전하며, 멀티스레딩 환경에서 안전하게 사용할 수 있음
+		StringBuilder는 스레드 안전하지 않지만, 단일 스레드 환경에서 더 빠르게 작동
          */
+        System.out.println(sb.insert(5, "!!!"));
+        System.out.println(sb); // insert 한게 유지됨
+        System.out.println(sb.getClass().getName()); //StringBuffer
+        System.out.println(sb.toString().getClass().getName());  // String
+        // substring 은 똑같음
+
+
+
     }
 }
