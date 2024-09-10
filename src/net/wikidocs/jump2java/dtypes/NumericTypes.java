@@ -1,4 +1,4 @@
-package net.wikidocs.study.jump2java.dtypes;
+package net.wikidocs.jump2java.dtypes;
 
 public class NumericTypes {
     public static void main(String[] args) {

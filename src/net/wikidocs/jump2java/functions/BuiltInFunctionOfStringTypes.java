@@ -1,4 +1,4 @@
-package net.wikidocs.study.jump2java.functions;
+package net.wikidocs.jump2java.functions;
 
 public class BuiltInFunctionOfStringTypes {
     public static void main(String[] args){
