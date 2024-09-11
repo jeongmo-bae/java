@@ -34,15 +34,15 @@ public class RansomNote {
 
     public static void main(String[] args){
         RansomNote ransomNote = new RansomNote();
-        HashMap<String,Object> testCase = new HashMap<>();
+        HashMap<String,String[]> testCase = new HashMap<>();
         testCase.put("ransomNoteArrayList",new String[]{"a","aa","aa"});
         testCase.put("magazineArrayList",new String[]{"b","ab","aab"});
 
         for (int i=0; i < 3 ; i++){
             System.out.println(
                     ransomNote.canConstruct(
-                            ((String[]) testCase.get("ransomNoteArrayList"))[i]
-                            ,((String[]) testCase.get("magazineArrayList"))[i]
+                            testCase.get("ransomNoteArrayList")[i]
+                            ,testCase.get("magazineArrayList")[i]
                     )
             );
         }
