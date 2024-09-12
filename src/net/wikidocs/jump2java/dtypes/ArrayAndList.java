@@ -51,7 +51,7 @@ public class ArrayAndList {
         System.out.println(pitches.remove("129"));   // true 반환
         System.out.println(pitches);
         System.out.println(pitches.remove(0));    // 해당 인덱스 value 반환
-        System.out.println(pitches);
+        System.out.printf("[END] %s%n",pitches);
         /*
         제네릭스(ArrayList<String>)를 사용하지 않으면 ArrayList에 추가하는 객체는 Object 자료형으로 인식된다.
         Object 자료형은 모든 객체가 상속하고 있는 가장 기본적인 자료형이다.
