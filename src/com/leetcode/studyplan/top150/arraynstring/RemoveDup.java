@@ -13,7 +13,7 @@ public class RemoveDup {
         for (Integer i : nums){
             countMap.put(i,countMap.getOrDefault(i,0)+1);
         }
-        TreeMap<Integer, Integer> sortedMap = new TreeMap<>(countMap);
+        TreeMap<Integer, Integer> sortedMap = new TreeMap<>(countMap);  // TreeMap 은 Key값 자동 정렬 함
         for (int key : sortedMap.keySet()){
             nums[k] = key ;
             k++;
