@@ -1,4 +1,6 @@
 package com.leetcode.studyplan.top150.arraynstring;
+// 27. Remove Element
+// https://leetcode.com/problems/remove-element/?envType=study-plan-v2&envId=top-interview-150
 
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -6,12 +8,23 @@ import java.util.HashMap;
 
 public class RemoveElement {
     public int removeElements(int[] nums, int val) {
-        int k = 0;
+        int k = nums.length;
         ArrayList<Integer> arrListOfNums = new ArrayList<>();
         for (int num : nums){
-            arrListOfNums.add((Integer) num);
+            arrListOfNums.add(Integer.valueOf(num)); // Integer.valueOf() 안해도 AutoBoxing 되긴함
         }
-        System.out.println(arrListOfNums);
+//        System.out.println(arrListOfNums);
+        while(arrListOfNums.remove(Integer.valueOf(val))) {
+            k--;
+            //System.out.println(arrListOfNums);
+        }
+
+        nums = new int[arrListOfNums.size()];
+        for (int i=0;i< arrListOfNums.size(); i++) {
+            nums[i] = arrListOfNums.get(i);
+        }
+        System.out.println(Arrays.toString(nums));
+
         return k;
     }
     public static void main(String[] args) {
