@@ -1,6 +1,7 @@
 package com.leetcode.studyplan.top150.arraynstring;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.HashMap;
 import java.util.Map;
 //import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.Map;
 //https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/?envType=study-plan-v2&envId=top-interview-150
 public class RemoveDuplicatesfromSortedArrayII {
     public int removeDuplicates(int[] nums) {
-        HashMap<Integer,Integer> countMap = new HashMap<>();
+        HashMap<Integer,Integer> countMap = new LinkedHashMap<>();
         for (Integer num : nums) {
             if (countMap.getOrDefault(num, 0) != 2){
                 countMap.put(num, (countMap.getOrDefault(num, 0) + 1));
@@ -24,8 +25,6 @@ public class RemoveDuplicatesfromSortedArrayII {
                 nums[i] = key;
             }
         }
-        System.out.println(countMap);
-        System.out.println(Arrays.toString(nums));
         return k;
     }
 
@@ -62,10 +61,11 @@ public class RemoveDuplicatesfromSortedArrayII {
             int[] nums = ((int[][]) testCase.get("numsArrayList"))[i];
 
             // 병합 메서드 실행
-            System.out.printf("##########%n[TestCase %d]%nInput nums : %s%nk = %d%n"
+            System.out.printf("##########%n[TestCase %d]%nInput nums : %s%nk = %d%nOutput nums : %s%n"
                     ,i+1
                     , Arrays.toString(nums)
                     , removeDup.removeDuplicates(nums)
+                    , Arrays.toString(nums)
             );
 
 
